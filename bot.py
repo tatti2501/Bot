@@ -6,6 +6,12 @@ PROXY = {'proxy_url': 'socks5://t3.learn.python.ru:1080',
 import logging
 logging.basicConfig(format='%(name)s - %(levelname)s - %(message)s', level = logging.INFO, filename='bot.log')
 
+# import ephem
+
+# planet_name = "Mars"
+# planet = getattr(ephem, planet_name)('2000/01/01')
+# const = ephem.constellation(planet)
+
 def greet_user(bot, update):
     print('Вызван/start')
     text='Вызван/start'
@@ -24,5 +30,7 @@ def talk_to_me(bot, update):
     user_text = update.message.text
     print(user_text)
     update.message.reply_text(user_text)
-    
+   
+
+
 main()
